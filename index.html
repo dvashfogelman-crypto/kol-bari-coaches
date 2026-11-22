@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מאמנים לקול בריא | הגשת מועמדות</title>
+<meta name="description" content="קול בריא – כושר והעצמה מנטלית לנוער – מתרחבת לכל הארץ ומחפשת מאמנות ומאמני כושר מוסמכים שאוהבים לעבוד עם נוער.">
+<meta property="og:title" content="דרושים מאמנים לקול בריא – בכל הארץ">
+<meta property="og:description" content="כושר והעצמה מנטלית לנוער בגילאי 12–16. בואו לאמן איתנו.">
+<meta property="og:image" content="img/studio-hd.jpg">
+<link rel="icon" href="img/logo.png">
+<style>
+  @font-face{font-family:'Rubik';src:url(fonts/rubik.woff2) format('woff2');font-weight:300 900;font-display:swap}
+    @font-face{font-family:'Assistant';src:url(fonts/assistant.woff2) format('woff2');font-weight:200 800;font-display:swap}
+
+  :root{
+    --cream:#f4ebdd;
+    --cream-2:#efe3d0;
+    --sand:#e6d4ba;
+    --tan:#d6bf9e;
+    --caramel:#b39470;
+    --brown:#8a6c4c;
+    --espresso:#3e3226;
+    --indigo:#34389a;
+    --violet:#7f86f0;
+    --shadow:#5d5853;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Assistant',system-ui,sans-serif;font-weight:400;color:var(--espresso);background:var(--cream);font-size:18px;line-height:1.7;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .serif{font-family:'Rubik',sans-serif}
+  .hand{font-family:'Rubik',sans-serif;font-weight:800;letter-spacing:.01em}
+  .wrap{width:min(1140px,90vw);margin-inline:auto;position:relative}
+  section,header,footer{position:relative}
+  .z{position:relative;z-index:2}
+
+  /* ——— decorative layer ——— */
+  .deco{position:absolute;pointer-events:none;z-index:0}
+  .sand-shape{background:var(--sand)}
+  .tan-shape{background:var(--tan);opacity:.55}
+  .dots{background-image:radial-gradient(rgba(255,255,255,.95) 2px,transparent 2.4px);background-size:22px 22px}
+  .dots.dark{background-image:radial-gradient(rgba(138,108,76,.28) 1.6px,transparent 2px)}
+
+  /* photo in organic frame with offset shadow — like the flyers */
+  .ph{position:relative;z-index:1}
+  .ph::before{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--shadow);transform:translate(-12px,12px);z-index:-1;opacity:.85}
+  .ph img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+  .shape-a{border-radius:62% 38% 46% 54% / 48% 40% 60% 52%}
+  .shape-b{border-radius:40% 60% 58% 42% / 56% 46% 54% 44%}
+  .shape-c{border-radius:48% 52% 38% 62% / 60% 54% 46% 40%}
+
+  /* ——— municipality corner ——— */
+
+  /* ——— hero ——— */
+  .hero{min-height:100vh;padding:40px 0 90px;overflow:hidden;display:flex;align-items:center}
+  .top-link{position:absolute;top:30px;right:5vw;z-index:5;font-weight:700;color:var(--brown);text-decoration:none;font-size:17px;letter-spacing:.02em}
+  .top-link::after{content:"";display:block;height:1.5px;background:var(--caramel);margin-top:3px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .logo-hero{width:min(440px,80%);margin-bottom:18px}
+  .tag{display:inline-block;font-size:22px;color:#fff;background:var(--brown);line-height:1;padding:9px 20px;border-radius:999px}
+  h1{font-family:'Rubik',sans-serif;font-weight:800;font-size:clamp(46px,6.6vw,88px);line-height:1.02;color:var(--indigo);margin:18px 0 22px;letter-spacing:-.02em}
+  h1 .soft{font-weight:800;color:var(--espresso);display:block}
+  .lead{font-size:21px;font-weight:300;max-width:32ch;color:var(--espresso)}
+  .lead b{font-weight:700}
+  .btn{display:inline-flex;align-items:center;gap:14px;margin-top:34px;background:var(--indigo);color:#fff;text-decoration:none;font-weight:700;font-size:19px;padding:17px 34px;border-radius:999px;border:0;cursor:pointer;font-family:inherit;transition:transform .25s, box-shadow .25s;box-shadow:0 10px 0 -4px rgba(52,56,154,.25)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 0 -4px rgba(52,56,154,.22)}
+  .btn .arr{transition:transform .25s}
+  .btn:hover .arr{transform:translateX(-5px)}
+  .hero-photos{position:relative;height:600px}
+  .hero-photos .p1{position:absolute;top:10px;inset-inline-start:0;width:88%;height:330px}
+  .hero-photos .p2{position:absolute;bottom:0;inset-inline-end:0;width:62%;height:300px}
+  .dumbbell{position:absolute;width:150px;bottom:-30px;inset-inline-start:4%;z-index:2;mix-blend-mode:multiply}
+
+  /* ——— stats ——— */
+  .stats{padding:20px 0 90px}
+  .stats-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--caramel);border-bottom:1.5px solid var(--caramel)}
+  .stat{padding:34px 18px;text-align:center}
+  .stat+.stat{border-inline-start:1px solid rgba(179,148,112,.45)}
+  .stat .n{font-family:'Rubik',sans-serif;font-weight:800;font-size:clamp(40px,5vw,62px);line-height:1;color:var(--indigo)}
+  .stat .l{font-size:16px;color:var(--brown);margin-top:10px}
+
+  /* ——— headings ——— */
+  .eyebrow{font-size:21px;color:var(--brown);line-height:1;display:block}
+  h2{font-family:'Rubik',sans-serif;font-weight:800;font-size:clamp(34px,4.6vw,56px);line-height:1.1;color:var(--indigo);margin:8px 0 24px;letter-spacing:-.01em}
+  h2 .soft{font-weight:800;color:var(--brown)}
+
+  /* ——— story ——— */
+  .story{padding:90px 0 110px;overflow:hidden}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .story p{margin-bottom:16px;font-weight:300;font-size:19px}
+  .story b{font-weight:700;color:var(--espresso)}
+  .story .ph{aspect-ratio:1/1.05}
+  .quote{margin-top:30px;font-family:'Rubik',sans-serif;font-weight:600;font-style:normal;font-size:26px;line-height:1.45;color:var(--brown);position:relative;padding-top:34px}
+  .quote::before{content:"”";position:absolute;top:-22px;right:-4px;font-size:90px;line-height:1;color:var(--tan)}
+
+  /* ——— session ——— */
+  .session{padding:100px 0;background:var(--cream-2);overflow:hidden}
+  .center{text-align:center;max-width:900px;margin:0 auto 54px}
+  .timeline{display:grid;grid-template-columns:2fr 1fr;height:84px;border-radius:999px;overflow:hidden;border:2.5px solid var(--espresso)}
+  .timeline>div{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.2}
+  .timeline .t1{background:var(--indigo);color:#fff}
+  .timeline .t2{background:var(--tan);color:var(--espresso)}
+  .timeline b{font-family:'Rubik',sans-serif;font-weight:700;font-size:22px}
+  .timeline small{font-size:15px;opacity:.85}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;margin-top:70px}
+  .pillar{position:relative;padding-top:6px}
+  .pillar .num{font-size:46px;line-height:.9;color:var(--caramel)}
+  .pillar h3{font-family:'Rubik',sans-serif;font-weight:700;font-size:26px;color:var(--indigo);margin:6px 0 8px}
+  .pillar p{font-weight:300;font-size:18px}
+
+  /* ——— gallery ——— */
+  .gallery{padding:110px 0 30px;overflow:hidden}
+  .gal{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:34px;align-items:center}
+  .gal .ph:nth-child(1){height:300px}
+  .gal .ph:nth-child(2){height:360px}
+  .gal .ph:nth-child(3){height:280px}
+
+  /* ——— seek / give ——— */
+  .seek{padding:90px 0 110px;overflow:hidden}
+  .lines{list-style:none}
+  .lines li{display:flex;gap:18px;align-items:baseline;padding:17px 0;border-bottom:1px solid rgba(179,148,112,.5);font-size:19px;font-weight:300}
+  .lines li:last-child{border-bottom:0}
+  .lines .k{font-size:22px;line-height:1;color:var(--caramel);flex:0 0 26px}
+  .lines b{font-weight:700;color:var(--indigo)}
+  .give{background:var(--sand);padding:46px 44px;border-radius:60px 60px 60px 180px;position:relative}
+  .give h3{font-family:'Rubik',sans-serif;font-weight:800;font-size:32px;color:var(--indigo);margin-bottom:14px}
+  .give ul{list-style:none}
+  .give li{padding:10px 0;padding-inline-start:30px;position:relative;font-weight:400}
+  .give li::before{content:"";position:absolute;inset-inline-start:0;top:20px;width:16px;height:1.5px;background:var(--brown)}
+
+  /* ——— form ——— */
+  .apply{padding:110px 0 130px;overflow:hidden}
+  .form-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+  .apply-intro p{font-weight:300;font-size:19px;margin-bottom:14px}
+  .steps{list-style:none;margin-top:30px;counter-reset:s}
+  .steps li{counter-increment:s;display:flex;gap:16px;align-items:center;padding:11px 0;font-size:18px}
+  .steps li::before{content:counter(s);font-family:'Rubik',sans-serif;font-weight:800;flex:0 0 40px;height:40px;border-radius:50%;background:var(--sand);color:var(--indigo);display:flex;align-items:center;justify-content:center;font-size:19px}
+  form{position:relative;background:#f9f2e7;border:2.5px solid var(--espresso);border-radius:44px;padding:48px 46px 50px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .field{margin-bottom:26px}
+  label{display:block;font-weight:700;color:var(--espresso);margin-bottom:4px;font-size:16px;letter-spacing:.01em}
+  label .req{color:var(--caramel)}
+  input[type=text],input[type=email],input[type=tel],textarea{width:100%;font-family:inherit;font-size:18px;font-weight:400;color:var(--espresso);background:transparent;border:0;border-bottom:1.5px solid var(--caramel);padding:9px 2px;border-radius:0;transition:border-color .2s}
+  textarea{min-height:104px;resize:vertical;border:1.5px solid var(--caramel);border-radius:22px;padding:12px 16px;margin-top:4px;background:rgba(255,255,255,.45)}
+  input:focus,textarea:focus{outline:none;border-color:var(--indigo)}
+  ::placeholder{color:#b8a58c}
+  input[type=tel],input[type=email]{direction:ltr;text-align:right}
+  .file{position:relative;margin-top:6px;border:1.5px dashed var(--caramel);border-radius:999px;padding:12px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:background .2s, border-color .2s}
+  .file:hover{background:rgba(214,191,158,.25)}
+  .file input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+  .file .fi{flex:0 0 38px;height:38px;border-radius:50%;background:var(--indigo);color:#fff;display:flex;align-items:center;justify-content:center}
+  .file .ft{font-weight:700;font-size:16px;display:block;line-height:1.3;word-break:break-all}
+  .file .fs{font-size:13px;color:var(--brown);display:block;line-height:1.3}
+  .file.has{border-style:solid;border-color:var(--indigo);background:rgba(127,134,240,.1)}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:15px;color:var(--brown);margin:4px 0 26px;letter-spacing:0}
+  .consent input{margin-top:6px;accent-color:var(--indigo);width:18px;height:18px;flex:0 0 auto}
+  .err{color:#a0283c;font-size:15px;margin-bottom:12px;display:none}
+  .submit{width:100%;justify-content:center;margin-top:0}
+  .submit[disabled]{opacity:.7;cursor:wait}
+  .hp{position:absolute;left:-9999px}
+
+  /* ——— footer ——— */
+  footer{padding:10px 0 50px;text-align:center}
+  .pill{display:inline-block;background:var(--brown);color:#fff;font-weight:700;font-size:clamp(16px,2.2vw,22px);padding:12px 34px;border-radius:22px}
+  .partners-title{font-family:'Rubik',sans-serif;font-weight:800;color:var(--brown);font-size:20px;margin-bottom:14px}
+  .partners{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 0;background:var(--brown);color:#fff;border-radius:22px;padding:14px 26px;font-weight:700;font-size:clamp(16px,2vw,20px);max-width:900px;margin:0 auto}
+  .partners li{padding:0 18px}
+  .partners li+li{border-inline-start:1.5px solid rgba(255,255,255,.45)}
+  .contact{margin-top:20px;color:var(--brown);font-size:16px}
+  .contact a{color:var(--indigo);font-weight:700;text-decoration:none}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease, transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    body{font-size:17px}
+    .hero{min-height:auto;padding-top:90px}
+    .hero-grid,.two,.form-shell{grid-template-columns:1fr;gap:46px}
+    .hero-photos{height:440px}
+    .hero-photos .p1{height:250px}
+    .hero-photos .p2{height:220px}
+    .dumbbell{width:130px;bottom:-30px;right:-20px}
+    .top-link{top:22px}
+    .partners{flex-direction:column;gap:8px;padding:16px 20px}
+    .partners li+li{border-inline-start:0;border-top:1px solid rgba(255,255,255,.35);padding-top:8px}
+    .stats-row{grid-template-columns:repeat(2,1fr)}
+    .stat:nth-child(3){border-inline-start:0}
+    .stat:nth-child(n+3){border-top:1px solid rgba(179,148,112,.45)}
+    .pillars{grid-template-columns:1fr;gap:34px}
+    .gal{grid-template-columns:1fr 1fr;gap:24px}
+    .gal .ph:nth-child(1){grid-column:1/-1;height:230px}
+    .gal .ph:nth-child(2),.gal .ph:nth-child(3){height:200px}
+    .row{grid-template-columns:1fr;gap:0}
+    form{padding:34px 22px 36px;border-radius:32px}
+    .give{padding:36px 28px;border-radius:44px 44px 44px 110px}
+    .timeline{height:76px}
+    .timeline b{font-size:18px}
+    .timeline small{display:none}
+    .story,.seek{padding:70px 0 80px}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <a class="top-link" href="#apply">להגשת מועמדות</a>
+
+  <!-- background shapes, lines, dots, strokes -->
+  <div class="deco sand-shape" style="width:62vw;height:120vh;top:-20vh;left:-12vw;border-radius:0 0 70% 30% / 0 0 60% 40%"></div>
+  <div class="deco tan-shape" style="width:420px;height:380px;bottom:-120px;right:-140px;border-radius:58% 42% 63% 37% / 45% 55% 45% 55%"></div>
+  <div class="deco dots" style="width:220px;height:150px;top:120px;left:44%"></div>
+  <svg class="deco" style="top:0;left:0;width:100%;height:100%" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M1440 120 C1180 60 1040 260 820 230 C620 200 560 40 300 70" fill="none" stroke="#fff" stroke-width="2.2" opacity=".9"/>
+    <path d="M0 760 C260 700 380 860 640 820" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+    <g stroke="#fff" stroke-linecap="round" opacity=".7">
+      <path d="M90 520 l70 -14" stroke-width="9"/><path d="M80 560 l110 -6" stroke-width="12"/><path d="M95 600 l80 8" stroke-width="7"/>
+    </g>
+  </svg>
+
+  <div class="wrap hero-grid z">
+    <div class="reveal">
+      <img class="logo-hero" src="img/logo.png" alt="קול בריא – כושר והעצמה מנטלית לנוער">
+      <span class="tag hand">קול בריא יוצאת לכל הארץ!</span>
+      <h1>בואו לאמן <span class="soft">את הדור הבא</span></h1>
+      <p class="lead">מחפשים <b>מאמנות ומאמני כושר מוסמכים</b>, עם ניסיון ולב גדול לנוער, שיובילו קבוצות קול בריא חדשות <b>לבנים ולבנות</b> בעיר שלהם.</p>
+      <a class="btn" href="#apply">אני רוצה לאמן בקול בריא <span class="arr">←</span></a>
+    </div>
+    <div class="hero-photos reveal">
+      <div class="ph p1 shape-a"><img src="img/studio-hd.jpg" alt="אימון קבוצתי של נערות קול בריא בסטודיו"></div>
+      <div class="ph p2 shape-b"><img src="img/boys-hd.jpg" alt="נערי קול בריא באימון כוח" style="object-position:50% 30%"></div>
+      <img class="dumbbell" src="img/dumbbell.png" alt="" aria-hidden="true">
+    </div>
+  </div>
+</header>
+
+<section class="stats">
+  <div class="wrap stats-row reveal">
+    <div class="stat"><div class="n">500+</div><div class="l">בני ובנות נוער כבר השתתפו</div></div>
+    <div class="stat"><div class="n">14</div><div class="l">קבוצות פועלות היום בירושלים</div></div>
+    <div class="stat"><div class="n">95%</div><div class="l">דיווחו על עלייה בביטחון העצמי</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">שנים של שינוי, ועכשיו כל הארץ</div></div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="deco tan-shape" style="width:460px;height:440px;top:40px;left:-180px;border-radius:42% 58% 37% 63% / 55% 45% 55% 45%"></div>
+  <div class="deco dots dark" style="width:180px;height:140px;top:90px;right:3vw"></div>
+  <div class="wrap two z">
+    <div class="reveal">
+      <span class="eyebrow hand">מה זה קול בריא?</span>
+      <h2>כושר שבונה <span class="soft">ביטחון עצמי מבפנים</span></h2>
+      <p>קול בריא היא תכנית של <b>כושר והעצמה מנטלית לנוער בגילאי 12–16</b>, שנולדה בעיריית ירושלים במחלקה לספורט בשכונות ובמחלקת הנוער. הקבוצות, לנערים ולנערות בנפרד ומכל האוכלוסיות, נפגשות פעם בשבוע במרכזי ספורט וסטודיואים.</p>
+      <p>שלוש שנים ראינו את זה קורה: נוער שהגיע בלי ביטחון מתחיל <b>לעוף על עצמו</b>, בני נוער מאוכלוסיות שבחיים לא נפגשות הופכים לחברים הכי טובים, ומי שתמיד ישב על הספסל בשיעורי ספורט מתאהב בתנועה.</p>
+      <p>עכשיו אנחנו מתרחבים לכל הארץ, ומה שהכי חשוב לנו הוא האנשים שיעמדו מול הקבוצות.</p>
+      <p class="quote">המאמן הוא דמות מפתח. הוא מעצב הרגלים, חשיבה וביטחון עצמי, בתוך האימון ומחוצה לו.</p>
+    </div>
+    <div class="ph shape-c reveal"><img src="img/mats.jpg" alt="נערות קול בריא כותבות מטרות על המזרנים"></div>
+  </div>
+</section>
+
+<section class="session">
+  <svg class="deco" style="top:0;left:0;width:100%;height:100%" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 90 C300 20 520 160 820 110 C1100 64 1260 150 1440 80" fill="none" stroke="#fff" stroke-width="2" opacity=".9"/>
+  </svg>
+  <div class="wrap z">
+    <div class="center reveal">
+      <span class="eyebrow hand">ככה נראה מפגש</span>
+      <h2>שעה וחצי <span class="soft">שמשנות שבוע שלם</span></h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="t1"><b>60 דקות אימון פונקציונלי</b><small>אירובי וכוח</small></div>
+      <div class="t2"><b>30 דקות העצמה</b><small>משחקים ושיח</small></div>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="num hand">01</div><h3>אימוני כוח</h3><p>אימון מקצועי שמתמקד בשיפור ובחוזקות של כל אחת ואחד.</p></div>
+      <div class="pillar reveal"><div class="num hand">02</div><h3>קהילה אמיתית</h3><p>נוער מכל האוכלוסיות, מרחב בטוח ומפרגן, וחברויות לחיים.</p></div>
+      <div class="pillar reveal"><div class="num hand">03</div><h3>כלים לחיים</h3><p>הצבת מטרות, דימוי עצמי והתמדה: כלים לגוף ולנפש שממשיכים איתם גם מחוץ לאימון.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="deco dots dark" style="width:200px;height:120px;top:50px;left:8vw"></div>
+  <div class="wrap gal z">
+    <div class="ph shape-b reveal"><img src="img/coach.jpg" alt="מאמן קול בריא עם הנערים" loading="lazy"></div>
+    <div class="ph shape-a reveal"><img src="img/girls.jpg" alt="קבוצת בנות של קול בריא" loading="lazy"></div>
+    <div class="ph shape-c reveal"><img src="img/collage.jpg" alt="רגעים מקבוצות קול בריא" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="seek">
+  <div class="wrap two z" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow hand">את מי אנחנו מחפשים</span>
+      <h2>זה את/ה, <span class="soft">אם…</span></h2>
+      <ul class="lines">
+        <li><span class="k hand">1</span><span>יש לך <b>תעודת מאמן/ת כושר</b> מוכרת</span></li>
+        <li><span class="k hand">2</span><span>יש לך <b>ניסיון באימון קבוצות</b>, ועדיף עם נוער</span></li>
+        <li><span class="k hand">3</span><span>את/ה <b>אוהב/ת נוער</b> ויודע/ת לראות כל אחד ואחת</span></li>
+        <li><span class="k hand">4</span><span>מתאים לך להתחייב <b>לאימון שבועי</b> לאורך המחזור</span></li>
+        <li><span class="k hand">5</span><span>חשוב לך להיות <b>דוגמה אישית</b>, גם מחוץ לאולם</span></li>
+      </ul>
+    </div>
+    <div class="give reveal">
+      <div class="deco dots" style="width:130px;height:90px;top:24px;left:30px"></div>
+      <h3>ומה תקבל/י מאיתנו</h3>
+      <ul>
+        <li>יום הכשרה מקצועי למאמנים ותכנים מוכנים, כולל חוברת מערכי העצמה</li>
+        <li>ניהול מלא של הקבוצה: שיווק, רישום, גבייה ותיאום מקום</li>
+        <li>תשלום על כל אימון</li>
+        <li>צוות מאמנים תומך ואירועי שיא שמחברים בין הקבוצות</li>
+        <li>הזדמנות אמיתית לשנות חיים של נערות ונערים</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="apply" id="apply">
+  <div class="deco sand-shape" style="width:56vw;height:100%;top:0;right:-10vw;border-radius:0 40% 0 60% / 0 30% 0 50%;opacity:.8"></div>
+  <svg class="deco" style="bottom:0;left:0;width:100%;height:100%" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M1440 760 C1200 700 1080 860 820 840" fill="none" stroke="#fff" stroke-width="2" opacity=".9"/>
+  </svg>
+  <div class="wrap form-shell z">
+    <div class="apply-intro reveal">
+      <span class="eyebrow hand">הגשת מועמדות</span>
+      <h2>מתחילים <span class="soft">כאן</span></h2>
+      <p>ממלאים את הטופס, מצרפים קורות חיים ותעודת מאמן, ואנחנו חוזרים למועמדים שמתאימים לנו לשיחת היכרות.</p>
+      <ol class="steps">
+        <li>שולחים את הטופס (2 דקות)</li>
+        <li>אנחנו עוברים על הפניות</li>
+        <li>חוזרים אליך לראיון</li>
+        <li>הכשרה, ויוצאים לדרך</li>
+      </ol>
+    </div>
+
+    <form id="applyForm" class="reveal" action="https://formsubmit.co/dvash_fo@jerusalem.muni.il" method="POST" enctype="multipart/form-data" novalidate>
+      <input type="hidden" name="_subject" value="מועמדות חדשה לאימון בקול בריא">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" id="nextUrl" value="">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+
+      <div class="row">
+        <div class="field">
+          <label for="name">שם מלא <span class="req">*</span></label>
+          <input type="text" id="name" name="שם מלא" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="city">אזור מגורים (עיר / יישוב) <span class="req">*</span></label>
+          <input type="text" id="city" name="אזור מגורים" required autocomplete="address-level2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="phone">מספר טלפון <span class="req">*</span></label>
+          <input type="tel" id="phone" name="טלפון" required autocomplete="tel" inputmode="tel" placeholder="050-0000000">
+        </div>
+        <div class="field">
+          <label for="email">מייל <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+        </div>
+      </div>
+      <div class="field">
+        <label for="about">קצת על עצמך <span class="req">*</span></label>
+        <textarea id="about" name="קצת על עצמי" required placeholder="ניסיון באימון, עם אילו קהלים עבדת, מה עוד חשוב שנדע…"></textarea>
+      </div>
+      <div class="field">
+        <label for="why">למה את/ה מעוניינ/ת לאמן בקול בריא? <span class="req">*</span></label>
+        <textarea id="why" name="למה מעוניין לאמן בקול בריא" required></textarea>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>קורות חיים <span class="req">*</span></label>
+          <div class="file">
+            <span class="fi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 20h14"/></svg></span>
+            <span><span class="ft">העלאת קובץ</span><span class="fs">PDF, Word או תמונה · עד 5MB</span></span>
+            <input type="file" id="cv" name="קורות חיים" accept=".pdf,.doc,.docx,image/*" required>
+          </div>
+        </div>
+        <div class="field">
+          <label>תעודת מאמן/ת כושר <span class="req">*</span></label>
+          <div class="file">
+            <span class="fi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 20h14"/></svg></span>
+            <span><span class="ft">העלאת קובץ</span><span class="fs">PDF או צילום של התעודה · עד 5MB</span></span>
+            <input type="file" id="cert" name="תעודת מאמן" accept=".pdf,.doc,.docx,image/*" required>
+          </div>
+        </div>
+      </div>
+
+      <label class="consent"><input type="checkbox" id="consent" required> <span>אני מאשר/ת שהפרטים נכונים ושצוות קול בריא יחזור אליי בטלפון או במייל בנוגע למועמדות.</span></label>
+
+      <div class="err" id="formErr"></div>
+      <button class="btn submit" type="submit" id="submitBtn">שליחת מועמדות <span class="arr">←</span></button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="partners-title">בשיתוף</p>
+    <ul class="partners"><li>עיריית ירושלים</li><li>עיריית תל אביב-יפו</li><li>החברה למתנ״סים</li><li>מנהלת עתידים בצה״ל</li></ul>
+    <p class="contact">שאלות? <a href="mailto:dvash_fo@jerusalem.muni.il">dvash_fo@jerusalem.muni.il</a> · באינסטגרם <a href="https://www.instagram.com/kolbari_jlm" target="_blank" rel="noopener">kolbari_jlm</a></p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.getElementById('nextUrl').value = new URL('thanks.html', location.href).href;
+
+  const MAX = 5 * 1024 * 1024;
+  document.querySelectorAll('.file input').forEach(inp => {
+    const box = inp.closest('.file'), ft = box.querySelector('.ft'), fs = box.querySelector('.fs'), fsDefault = fs.textContent;
+    inp.addEventListener('change', () => {
+      const f = inp.files[0];
+      box.classList.toggle('has', !!f);
+      ft.textContent = f ? f.name : 'העלאת קובץ';
+      fs.textContent = f ? (f.size > MAX ? 'הקובץ גדול מ־5MB, נא לבחור קובץ קטן יותר' : 'הקובץ צורף ✓') : fsDefault;
+    });
+  });
+
+  const form = document.getElementById('applyForm'), err = document.getElementById('formErr');
+  form.addEventListener('submit', e => {
+    const problems = [];
+    const req = { name: 'שם מלא', city: 'אזור מגורים', phone: 'טלפון', email: 'מייל', about: 'קצת על עצמך', why: 'למה לאמן בקול בריא' };
+    for (const [id, label] of Object.entries(req)) if (!document.getElementById(id).value.trim()) problems.push(label);
+    const email = document.getElementById('email').value.trim();
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) problems.push('כתובת מייל תקינה');
+    const phone = document.getElementById('phone').value.replace(/\D/g, '');
+    if (phone && phone.length < 9) problems.push('מספר טלפון תקין');
+    for (const [id, label] of [['cv', 'קורות חיים'], ['cert', 'תעודת מאמן']]) {
+      const f = document.getElementById(id).files[0];
+      if (!f) problems.push(label); else if (f.size > MAX) problems.push(label + ' (עד 5MB)');
+    }
+    if (!document.getElementById('consent').checked) problems.push('אישור יצירת קשר');
+    if (problems.length) { e.preventDefault(); err.textContent = 'חסר: ' + problems.join(' · '); err.style.display = 'block'; err.scrollIntoView({behavior:'smooth', block:'center'}); return; }
+    err.style.display = 'none';
+    const b = document.getElementById('submitBtn'); b.disabled = true; b.textContent = 'שולח…';
+  });
+</script>
+</body>
+</html>
